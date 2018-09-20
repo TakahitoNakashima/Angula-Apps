@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <h2>Todo Lists!</h2>
+  <div>
+    <label>id: </label>{{todo.id}}
+    <label>title: </label>{{todo.name}}
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="todo.name">
+  </div>
+
+  <h2>My Todos Lists!</h2>
+  <ul class="todos">
+    <li *ngFor="let todo of todos" (click)="onSelect(todo)" [class.selected]="todo === selectedTodo">
+      <span class="badge">{{todo.id}}</span> {{todo.name}}
+    </li>
+  </ul>
+
+  <div *ngIf="selectedTodo">
+    <h2>{{selectedTodo.name}} Details</h2>
+    <div><label>id: </label>{{selectedTodo.id}}</div>
+    <div>
+      <label>name: </label>
+      <input type="text" [(ngModel)]="selectedTodo.name">
+    </div>
+  </div>
+    
+</div>
+
+<router-outlet></router-outlet>
