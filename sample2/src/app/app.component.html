@@ -19,14 +19,9 @@
     </li>
   </ul>
 
-  <div *ngIf="selectedTodo">
-    <h2>{{selectedTodo.name}} Details</h2>
-    <div><label>id: </label>{{selectedTodo.id}}</div>
-    <div>
-      <label>name: </label>
-      <input type="text" [(ngModel)]="selectedTodo.name">
-    </div>
-  </div>
+  <app-todo-detail [todo]="selectedTodo"></app-todo-detail>
+
+  
     
 </div>
 

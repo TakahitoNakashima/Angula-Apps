@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Todo } from './todo';
+import { TodoService } from './todo.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,9 @@ import { Todo } from './todo';
 })
 export class AppComponent {
   title = 'Todo-list';
-  todos = TODOS;
+
+  todos: Todo[];
+  
   selectedTodo: Todo;
 
   todo: Todo = {
@@ -20,10 +23,14 @@ export class AppComponent {
   onSelect(todo: Todo): void {
     this.selectedTodo = todo;
   }
-}
 
-const TODOS: Todo[] = [
-  { id: 11, name: 'Wake up', contents: '' },
-  { id: 12, name: 'Go RestRoom', contents: '' },
-  { id: 13, name: 'Eat BreakFast', contents: ''}
-];
+  getTodos() {
+    this.todos = this.todoService.getTodos();
+  }
+
+  ngOnInit(): void {
+    this.getTodos();
+  }
+
+  constructor(private todoService: TodoService) { }
+}
