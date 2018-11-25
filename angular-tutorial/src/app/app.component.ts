@@ -1,19 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Member } from './member';
 
-const MEMBERS: Member[] = [
-  { id: 11, name : '竹山　岳'},
-  { id: 12, name : '西山　景'},
-  { id: 13, name : '富沢　堅固'},
-  { id: 14, name : '田中　泰治'},
-  { id: 15, name : '富田　恵子'},
-  { id: 16, name : '砂糖　隆'},
-  { id: 17, name : '小林　純一'},
-  { id: 18, name : '真子　工事'},
-  { id: 19, name : '田中　雄大'},
-  { id: 20, name : '鈴木　隆'},
-  { id: 21, name : '小池　あこ'},
-]
+import { MemberService } from './member.service';
 
 @Component({
     selector: 'my-app',
@@ -72,14 +60,32 @@ const MEMBERS: Member[] = [
         border-radius: 4px 0 0 4px;
       }
     `
-    ]
+    ],
+    providers: [ MemberService ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 　title = '自社社員名簿';
-  members = MEMBERS;
+  members:
+
+  Member[];
   selectedMember: Member;
+
+  constructor(private memberService: MemberService) {
+    // this.members = this.memberService.getMembers();
+  }
+  // Dependency Injection (DI)
+
+  ngOnInit(): void {
+    // constructorが実行された後、初期化時に呼ばれるコールバック
+    this.getMembers();
+  }
+
 
   onSelect(member: Member): void {
     this.selectedMember = member;
+  }
+
+  getMembers(): void {
+    this.memberService.getMembers().then(members => this.members = members);
   }
 }
