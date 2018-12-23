@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { ChatComponent } from './chat/chat.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', component: ChatComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: 'signup', component: SignUpComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(routes)
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  declarations: []
 })
 export class AppRoutingModule { }

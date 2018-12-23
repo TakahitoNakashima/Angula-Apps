@@ -1,16 +1,20 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { AuthService } from './service/auth.service';
 
 @NgModule({
-  declarations: [
-    HeaderComponent
+  imports: [
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent
   ],
-  imports: [
-    CommonModule
+  declarations: [HeaderComponent],
+  providers: [
+    AuthService
   ]
 })
 export class CoreModule {
