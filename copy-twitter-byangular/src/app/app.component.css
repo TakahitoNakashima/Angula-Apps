@@ -1,0 +1,153 @@
+/* basic */
+body {
+  background: #e6ecf0;
+  color: #14171a;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-y: scroll;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: relative;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  text-align: inherit;
+  display: list-item;
+}
+
+form {
+  display: block;
+}
+
+button {
+  background: transparent;
+  transition: box-shadow .15s ease-in-out;
+}
+
+/* header */
+.top-bar {
+ border-bottom: 1px solid rgba(0,0,0,0.05);
+ position: fixed;
+ top: 0;
+ right: 0;
+ left: 0;
+ z-index: 1000;
+}
+
+.global-nav {
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  height:46px;
+  position: relative;
+  width: auto;
+}
+
+.global-nav-inner {
+  background: #fff;
+  height: 46px;
+}
+
+.global-nav .container{
+  padding: 0;
+  width: auto;
+  min-width: 590px;
+  height: 100%;
+  max-width: 890px;
+  text-align: center;
+}
+
+.nav {
+  text-align: left;
+}
+
+.nav li {
+  float: left;
+  color: #66757f;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
+#global-nav-home {
+  margin: 11px 0 0 10px;
+}
+
+.notifications {
+  margin: 11px 0 0 10px;
+}
+
+.moments {
+  margin: 11px 0 0 10px;
+}
+
+.dm {
+  margin: 11px 0 0 10px;
+}
+
+.pull-right {
+  float: right;
+  text-align: left;
+}
+
+.nav-extras {
+  align-items: center;
+  display: inline-flex;
+  height: 100%;
+}
+
+.form-search {
+  width: 139px;
+  float: left;
+  height: 33px;
+  margin: 7px 15px 0 0;
+  font-size: 12px;
+  position: relative;
+}
+
+.global-nav .search-input {
+  background-color: #f5f8fa;
+  border-radius: 21px;
+  border: 1px solid #e6ecf0;
+  box-sizing: border-box;
+  color: #14171a;
+  display: block;
+  font-size: 12px;
+  height: 32px;
+  line-height: 16px;
+  padding: 8px 32px 8px 12px;
+  width: 100%;
+}
+
+.pull-right .right-actions {
+  align-items: center;
+  display: inline-flex;
+  height: 100%;
+}
+
+#global-new-tweet-button {
+  background-color: #1da1f2;
+  border: 1px solid #1da1f2;
+  color: #fff;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+
+/* main contents */
+.page-container {
+  padding-top: 10px;
+}
