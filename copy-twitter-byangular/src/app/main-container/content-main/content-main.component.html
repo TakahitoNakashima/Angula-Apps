@@ -3,11 +3,18 @@
       <div class="home-tweet-box tweet-box-component tweet-user">
           <input class="tweet-input" [(ngModel)]="newTweetContents" placeholder="いまどうしてる？">
           <button (click)="setTweetContents(newTweetContents)">ツイート</button>
+          <input type='file' accept="image/*" (change)="onChangeInput($event)">
       </div>
+      <img [src]=imageSrc alt="" />
     </div>
   <div class="stream-container">
     <div class="stream">
-      <li class="stream-items" *ngFor="let tweetContent of tweetContents">{{ tweetContent.user }} : {{ tweetContent.contents }}</li>
+      <div class="stream-items" *ngFor="let tweetContent of tweetContents">
+          <li>{{ tweetContent.user }} : {{ tweetContent.contents }}</li>
+          <div *ngIf="tweetContent.file">
+              <img class="tweet-image" [src]=tweetContent.file alt="" />
+          </div>
+      </div>
     </div>
   </div>
 

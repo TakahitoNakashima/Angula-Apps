@@ -10,6 +10,8 @@ import { TweetContentsService } from '../../service/tweet-contents.service';
 export class ContentMainComponent implements OnInit {
 
   newTweetContents = '';
+  imageSrc = '';
+  reader = new FileReader();
 
   tweetContents: TweetContents[];
 
@@ -24,11 +26,23 @@ export class ContentMainComponent implements OnInit {
       .subscribe(tweetContents => this.tweetContents = tweetContents);
   }
 
-  setTweetContents(newTweetContents: string, newFile: string): void {
+  setTweetContents(newTweetContents: string): void {
     if (newTweetContents) {
-      this.tweetContentsService.setTweetContents(newTweetContents, newFile);
+      this.tweetContentsService.setTweetContents(newTweetContents, this.imageSrc);
       this.newTweetContents = '';
+      this.imageSrc = '';
     }
+  }
+
+  onChangeInput(evt) {
+    const file = evt.target.files[0];
+    const filePath = 'upload_files';
+
+    this.reader.onload = ((e) => {
+      this.imageSrc = e.target['result'];
+    });
+    this.reader.readAsDataURL(file);
+
   }
 
 }
