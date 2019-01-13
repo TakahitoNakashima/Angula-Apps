@@ -1,0 +1,15 @@
+<div class="content-main" id="timeline">
+    <div class="timeline-tweet-box">
+      <div class="home-tweet-box tweet-box-component tweet-user">
+
+          <input placeholder="いまどうしてる？">
+
+      </div>
+    </div>
+  <div class="stream-container">
+    <div class="stream">
+      <li class="stream-items" *ngFor="let tweetContent of tweetContents">{{ tweetContent.contents }}</li>
+    </div>
+  </div>
+
+</div>
