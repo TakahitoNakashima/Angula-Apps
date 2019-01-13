@@ -8,11 +8,6 @@ import { TweetContents } from '../../../tweet-contents';
 })
 export class TweetBoxComponent implements OnInit {
 
-  tweetContents: TweetContents = {
-    id: 1,
-    contents: 'hello'
-  };
-
   constructor() { }
 
   ngOnInit() {

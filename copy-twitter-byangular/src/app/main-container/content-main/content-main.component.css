@@ -1,0 +1,91 @@
+/* basic */
+body {
+  background: #e6ecf0;
+  color: #14171a;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-y: scroll;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: relative;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  text-align: inherit;
+  display: list-item;
+  list-style: none;
+}
+
+form {
+  display: block;
+}
+
+button {
+  background: transparent;
+  transition: box-shadow .15s ease-in-out;
+}
+
+/* main contents */
+.page-container {
+  padding: 56px 14px 0 14px;
+  margin: 0 8%;
+}
+
+.dashboard {
+  float: left;
+  width: 25%;
+}
+
+.module {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.DashboardProfileCard {
+  border: 1px solid #e6ecf0;
+  background: #fff;
+}
+
+.Trends {
+  background-color: #fff;
+  background-clip: inherit;
+  border: 1px solid #e6ecf0;
+  line-height: inherit;
+  padding: 15px;
+}
+
+.content-main {
+  float: left;
+  width: 48%;
+  margin: 0 1%;
+}
+
+.timeline-tweet-box {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border: 1px solid #e6ecf0;
+}
+
+.home-tweet-box {
+  background-color: #E8F5FD;
+}
+
+.tweet-input {
+  border: 1px solid #e6ecf0;
+  border-radius: 8px;
+  line-height: 20px;
+  margin: 0 10px 0 20px;
+}
+
+.stream-items {
+  background: #fff;
+  border: 1px solid #e6ecf0;
+  background-clip: padding-box;
+  padding: 10px 20px;
+}
+

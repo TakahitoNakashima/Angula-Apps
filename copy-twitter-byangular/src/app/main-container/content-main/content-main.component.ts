@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TweetContents } from '../../tweet-contents';
-import { TWEETCONTENTS } from '../../mock-data/mock-tweet-contents';
+import { TweetContentsService } from '../../service/tweet-contents.service';
 
 @Component({
   selector: 'app-content-main',
@@ -9,16 +9,26 @@ import { TWEETCONTENTS } from '../../mock-data/mock-tweet-contents';
 })
 export class ContentMainComponent implements OnInit {
 
-  // tweetContents: TweetContents = {
-  //   id: 1,
-  //   contents: 'Hello Contents'
-  // };
+  newTweetContents = '';
 
-  tweetContents = TWEETCONTENTS;
+  tweetContents: TweetContents[];
 
-  constructor() { }
+  constructor(private tweetContentsService: TweetContentsService) { }
 
   ngOnInit() {
+    this.getTweetContents();
+  }
+
+  getTweetContents(): void {
+    this.tweetContentsService.getTweetContents()
+      .subscribe(tweetContents => this.tweetContents = tweetContents);
+  }
+
+  setTweetContents(newTweetContents: string, newFile: string): void {
+    if (newTweetContents) {
+      this.tweetContentsService.setTweetContents(newTweetContents, newFile);
+      this.newTweetContents = '';
+    }
   }
 
 }
