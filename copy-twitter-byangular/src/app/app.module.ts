@@ -10,6 +10,7 @@ import { ContentMainComponent } from './main-container/content-main/content-main
 import { TweetBoxComponent } from './main-container/content-main/tweet-box/tweet-box.component';
 import { StreamContainerComponent } from './main-container/content-main/stream-container/stream-container.component';
 import { TweetContents } from './tweet-contents';
+import { TweetFormComponent } from './main-container/content-main/tweet-form/tweet-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TweetContents } from './tweet-contents';
     MainContainerComponent,
     ContentMainComponent,
     TweetBoxComponent,
-    StreamContainerComponent
+    StreamContainerComponent,
+    TweetFormComponent
   ],
   imports: [
     BrowserModule,

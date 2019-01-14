@@ -1,0 +1,17 @@
+<div class="timeline-tweet-box">
+  <div class="home-tweet-box tweet-box-component tweet-user">
+    <form (ngSubmit)="onSubmit()" #tweetForm="ngForm">
+      <div class="form-group">
+        <input type='text' class="tweet-input form-control" [(ngModel)]="model.contents" #contents="ngModel" name="contents" placeholder="いまどうしてる？">
+        <label class='choice-image'>
+          +
+          <input type='file' class="form-control" accept="image/*" [ngModel]="model.file" #file="ngModel" name="file"  (change)="onChangeInput($event)" style="display:none;">
+        </label>
+        <button type='submit' class="tweet-button" (click)="setTweetContents(); tweetForm.reset()">ツイート</button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="fileUrl" class="preview-image">
+    <img [src]=fileUrl alt="" />
+  </div>
+</div>

@@ -1,6 +1,9 @@
 export class TweetContents {
-  id: number;
-  user: string;
-  contents: string;
-  file: string;
+
+  constructor(
+    public id: number,
+    public user: string,
+    public contents: string,
+    public file: string
+  ) { }
 }

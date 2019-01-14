@@ -11,6 +11,7 @@ export class ContentMainComponent implements OnInit {
 
   newTweetContents = '';
   imageSrc = '';
+  fileName = '';
   reader = new FileReader();
 
   tweetContents: TweetContents[];
@@ -36,13 +37,10 @@ export class ContentMainComponent implements OnInit {
 
   onChangeInput(evt) {
     const file = evt.target.files[0];
-    const filePath = 'upload_files';
-
     this.reader.onload = ((e) => {
       this.imageSrc = e.target['result'];
     });
     this.reader.readAsDataURL(file);
-
   }
 
 }

@@ -1,12 +1,5 @@
 <div class="content-main" id="timeline">
-    <div class="timeline-tweet-box">
-      <div class="home-tweet-box tweet-box-component tweet-user">
-          <input class="tweet-input" [(ngModel)]="newTweetContents" placeholder="いまどうしてる？">
-          <button (click)="setTweetContents(newTweetContents)">ツイート</button>
-          <input type='file' accept="image/*" (change)="onChangeInput($event)">
-      </div>
-      <img [src]=imageSrc alt="" />
-    </div>
+  <app-tweet-form></app-tweet-form>
   <div class="stream-container">
     <div class="stream">
       <div class="stream-items" *ngFor="let tweetContent of tweetContents">
@@ -17,5 +10,4 @@
       </div>
     </div>
   </div>
-
 </div>
