@@ -7,9 +7,6 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { ContentMainComponent } from './main-container/content-main/content-main.component';
-import { TweetBoxComponent } from './main-container/content-main/tweet-box/tweet-box.component';
-import { StreamContainerComponent } from './main-container/content-main/stream-container/stream-container.component';
-import { TweetContents } from './tweet-contents';
 import { TweetFormComponent } from './main-container/content-main/tweet-form/tweet-form.component';
 
 @NgModule({
@@ -18,8 +15,6 @@ import { TweetFormComponent } from './main-container/content-main/tweet-form/twe
     TopBarComponent,
     MainContainerComponent,
     ContentMainComponent,
-    TweetBoxComponent,
-    StreamContainerComponent,
     TweetFormComponent
   ],
   imports: [

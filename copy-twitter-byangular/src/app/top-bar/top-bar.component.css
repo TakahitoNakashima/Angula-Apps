@@ -35,6 +35,11 @@ button {
   z-index: 1000;
  }
 
+.container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
  .global-nav {
    border-bottom: 1px solid rgba(0,0,0,0.25);
    height:46px;

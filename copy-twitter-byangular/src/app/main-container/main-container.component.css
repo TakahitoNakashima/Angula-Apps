@@ -31,8 +31,7 @@ button {
 
 /* main contents */
 .page-container {
-  padding: 56px 14px 0 14px;
-  margin: 0 8%;
+  margin: 24px 15% 0 15%;
 }
 
 .dashboard {
@@ -56,11 +55,6 @@ button {
   border: 1px solid #e6ecf0;
   line-height: inherit;
   padding: 15px;
-}
-
-.content-main {
-  float: left;
-  width: 50%;
 }
 
 .timeline-tweet-box {
