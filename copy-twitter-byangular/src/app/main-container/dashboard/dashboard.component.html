@@ -1,0 +1,13 @@
+<div class="dashboard">
+    <div class="DashboardProfileCard module">
+      <div class='profile-title profile-contents'>アカウント情報</div>
+      <div class='profile-name profile-contents'>{{ model.name }}</div>
+      <div class='profile-selfIntroduction profile-contents'>{{ model.selfIntroduction }}</div>
+      <div class='profile-birthday profile-contents'>誕生日 : {{ model.birthday | date }}</div>
+      <div class='profile-contents'>
+        <div class='profile-follow'>{{ model.follow }}<span class="sub-follow">フォロー</span></div>
+        <div class='profile-follower'>{{ model.follower }}<span class="sub-follower">フォロワー</span></div>
+      </div>
+    </div>
+    <div class="module Trends">Trends</div>
+</div>

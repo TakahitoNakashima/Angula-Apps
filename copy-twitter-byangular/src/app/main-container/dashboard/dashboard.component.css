@@ -1,0 +1,63 @@
+.dashboard {
+  float: left;
+  width: 25%;
+}
+
+.DashboardProfileCard {
+  border: 1px solid #e6ecf0;
+  background: #fff;
+}
+
+.module {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.Trends {
+  background-color: #fff;
+  background-clip: inherit;
+  border: 1px solid #e6ecf0;
+  line-height: inherit;
+  padding: 15px;
+}
+
+.profile-contents {
+  margin: 8px;
+}
+
+.profile-title {
+  font-weight: bold;
+}
+
+.profile-name {
+  color: gray;
+}
+
+.profile-selfIntroduction {
+  font-size: 12px;
+}
+
+.profile-birthday {
+  font-size: 12px;
+  color: gray;
+}
+
+.profile-follow {
+  width: 50%;
+  display: inline-block;
+}
+
+.sub-follow {
+  font-size: 10px;
+  color: gray;
+}
+
+.profile-follower {
+  width: 50%;
+  display: inline-block;
+}
+
+.sub-follower {
+  font-size: 10px;
+  color: gray;
+}

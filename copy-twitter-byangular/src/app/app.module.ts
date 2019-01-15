@@ -8,6 +8,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { ContentMainComponent } from './main-container/content-main/content-main.component';
 import { TweetFormComponent } from './main-container/content-main/tweet-form/tweet-form.component';
+import { DashboardComponent } from './main-container/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TweetFormComponent } from './main-container/content-main/tweet-form/twe
     TopBarComponent,
     MainContainerComponent,
     ContentMainComponent,
-    TweetFormComponent
+    TweetFormComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
