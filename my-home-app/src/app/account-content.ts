@@ -1,6 +1,6 @@
 export class AccountContent {
   constructor(
-    public date: Date,
+    public date: string,
     public amount: number,
     public title: string
   ) { }

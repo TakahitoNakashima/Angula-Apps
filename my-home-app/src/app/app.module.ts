@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccountContentsComponent } from './account-contents/account-contents.component';
-import { AccountContentsFormComponent } from './account-contents-form/account-contents-form.component';
+import { AccountContentsFormComponent } from './account-contents/account-contents-form/account-contents-form.component';
 
 @NgModule({
   declarations: [
