@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AccountContent } from '../../account-content';
+import { ACCOUNTCONTENTS } from '../../account-contents';
 
 @Component({
   selector: 'app-account-contents-form',
@@ -14,6 +15,8 @@ export class AccountContentsFormComponent implements OnInit {
   dateNow = new Date();
   model = new AccountContent(this.getDateStr(this.dateNow), 1000, '唐揚げ弁当');
   submitted = false;
+
+  accountContents = ACCOUNTCONTENTS;
 
   onSubmit() { this.submitted = true; }
 
