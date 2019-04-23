@@ -17,20 +17,3 @@
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
-<div class="container">
-  <h1>利用明細</h1>
-  <div class="detail-card" *ngFor="let accountContent of accountContents">
-    <div class="detail-content">
-      <label for="date" class="detail-label">Date:</label>
-      <div>{{accountContent.date}}</div>
-    </div>
-    <div class="detail-content">
-      <label for="title" class="detail-label">Title:</label>
-      <div>{{accountContent.title}}</div>
-    </div>
-    <div class="detail-content">
-      <label for="amount" class="detail-label">Amount:</label>
-      <div>{{accountContent.amount}}</div>
-    </div>
-  </div>
-</div>
