@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-import { ACCOUNTCONTENTS } from '../../account-contents';
+import { AccountContent } from '../../account-content';
+import { AccountService } from '../../account.service';
 
 @Component({
   selector: 'app-account-content-detail',
@@ -9,11 +10,16 @@ import { ACCOUNTCONTENTS } from '../../account-contents';
 })
 export class AccountContentDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
-  accountContents = ACCOUNTCONTENTS;
+  accountContents: AccountContent[];
+
+  getAccountContents(): void {
+    this.accountContents = this.accountService.getAccountContents();
+  }
 
   ngOnInit() {
+    this.getAccountContents();
   }
 
 }

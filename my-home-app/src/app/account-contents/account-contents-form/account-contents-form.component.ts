@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { AccountContent } from '../../account-content';
-
+import { ACCOUNTCONTENTS } from '../../account-contents';
+import { AccountService } from '../../account.service';
 
 @Component({
   selector: 'app-account-contents-form',
@@ -10,10 +11,9 @@ import { AccountContent } from '../../account-content';
 })
 export class AccountContentsFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
+  @Input() accountContent: AccountContent;
 
-  dateNow = new Date();
-  model = new AccountContent(this.getDateStr(this.dateNow), 1000, '唐揚げ弁当');
   submitted = false;
 
   onSubmit() { this.submitted = true; }
@@ -30,7 +30,7 @@ export class AccountContentsFormComponent implements OnInit {
   }
 
   // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
+  // get diagnostic() { return JSON.stringify(this.model); }
 
   ngOnInit() {
   }
