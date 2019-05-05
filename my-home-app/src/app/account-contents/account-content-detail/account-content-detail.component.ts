@@ -15,7 +15,8 @@ export class AccountContentDetailComponent implements OnInit {
   accountContents: AccountContent[];
 
   getAccountContents(): void {
-    this.accountContents = this.accountService.getAccountContents();
+    this.accountService.getAccountContents()
+      .subscribe(accountContents => this.accountContents = accountContents);
   }
 
   ngOnInit() {
